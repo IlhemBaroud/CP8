@@ -1,0 +1,18 @@
+Algorithme Sentence_traitment
+VAR
+nbc, nbv, nbw, i : integer ;
+sentence : string ;
+BEGIN
+Write (‘Enter a sentence which finishes with .’) ;
+Read (sentence) ;
+nbc=0 ; nbv=0; nbw=0;
+WHILE (sentence[i]<>'') DO
+    nbc++;
+    IF (sentence[i]==' ' or sentence[i]=='.') THEN
+        nbw++;
+    END_IF
+    IF (sentence[i] in ('a', 'e', 'u','o','i','y')) THEN
+        nbv++;
+    END_IF
+END_WHILE
+ Write('The sentence ',sentence,' contains ',nbc,' characters, ', nbv,' vowels and ',nbw,' words');  
